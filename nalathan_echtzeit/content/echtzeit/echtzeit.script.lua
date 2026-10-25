@@ -1,13 +1,18 @@
 local DAY_SECONDS = 24 * 60 * 60
-local REAL_DAY_MILLIS = DAY_SECONDS * 1000
+local RESEND_TICKS = 30
 local GAME_TIME_SCRIPT = "::/game_mechanics/game_time/game_time.gs"
+
+local lastDateKey = nil
+local lastDateTick = 0
+local lastPauseTick = 0
+local pausedAfterLoad = false
 
 local function getGameTime()
 	return api.engine.getComponent(api.engine.util.getWorld(), api.type.ComponentType.GAME_TIME)
 end
 
-local function sendCalendarSpeed(factor)
-	api.cmd.sendCommand(api.cmd.makeGameSetCalendarSpeedCmd(math.floor(REAL_DAY_MILLIS / factor)))
+local function pauseCalendar()
+	api.cmd.sendCommand(api.cmd.makeGameSetCalendarSpeedCmd(0))
 end
 
 local function getCurrentSeconds(s, gameTimeMs)
@@ -45,7 +50,18 @@ end
 local function syncEngine(s, gameTime)
 	local current = api.engine.util.getCalendarDate(gameTime.gameTime)
 	if current.year ~= s.year or current.month ~= s.month or current.day ~= s.day then
-		api.cmd.sendCommand(api.cmd.makeGameSetDateCmd(api.type.Date.new(s.year, s.month, s.day)))
+		local key = s.year * 10000 + s.month * 100 + s.day
+		if key ~= lastDateKey or gameTime.tickCount-lastDateTick >= RESEND_TICKS then
+			api.cmd.sendCommand(api.cmd.makeGameSetDateCmd(api.type.Date.new(s.year, s.month, s.day)))
+			lastDateKey = key
+			lastDateTick = gameTime.tickCount
+		end
+	end
+
+	local gameSpeed = api.engine.getComponent(api.engine.util.getWorld(), api.type.ComponentType.GAME_SPEED)
+	if gameSpeed.speedup > 0 and gameSpeed.millisPerDay ~= 0 and gameTime.tickCount-lastPauseTick >= RESEND_TICKS then
+		pauseCalendar()
+		lastPauseTick = gameTime.tickCount
 	end
 
 	local timeOfDay = math.floor(getCurrentSeconds(s, gameTime.gameTime)) % DAY_SECONDS
@@ -67,6 +83,11 @@ local function update(_userParams, state, _dt)
 	local s = state:get()
 	if s == nil or not s.active then
 		return
+	end
+
+	if not pausedAfterLoad then
+		pauseCalendar()
+		pausedAfterLoad = true
 	end
 
 	local gameTime = getGameTime()
@@ -96,7 +117,7 @@ local function handleEvent(_userParams, state, _src, id, name, param)
 		s.anchorSec = param.seconds
 		s.anchorGameTime = gameTime.gameTime
 		normalizeDate(s)
-		sendCalendarSpeed(s.factor)
+		pauseCalendar()
 		api.cmd.sendCommand(api.cmd.makeScriptingSendEventCmd("", "GameTime", "SetMode", { mode = "Constant" }))
 		state:set(s)
 	elseif name == "EchtzeitFactor" then
@@ -105,9 +126,6 @@ local function handleEvent(_userParams, state, _src, id, name, param)
 			normalizeDate(s)
 		end
 		s.factor = param.factor
-		if s.active then
-			sendCalendarSpeed(s.factor)
-		end
 		state:set(s)
 	elseif name == "EchtzeitStop" then
 		s.active = false

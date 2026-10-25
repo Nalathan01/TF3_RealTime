@@ -4,8 +4,6 @@ local engine_react_util = ug_require "::/gui/main/engine_react_util.tl"
 local game_react_globals = ug_require "::/gui/main/game_react_globals.tl"
 local game_bar_widgets = ug_require "::/gui/game_bar/game_bar_widgets.tl"
 
-local DAY_SECONDS = 24 * 60 * 60
-local REAL_DAY_MILLIS = DAY_SECONDS * 1000
 local FACTORS = { 1, 10, 60, 600, 3600 }
 local SCRIPT_NAMES = { "nalathan_echtzeit::/echtzeit/echtzeit.gs", "::/echtzeit/echtzeit.gs" }
 
@@ -29,7 +27,6 @@ end
 
 local function makeStatus()
 	local gameTime = api.engine.getComponent(api.engine.util.getWorld(), api.type.ComponentType.GAME_TIME)
-	local gameSpeed = api.engine.getComponent(api.engine.util.getWorld(), api.type.ComponentType.GAME_SPEED)
 	local date = api.engine.util.getCalendarDate(gameTime.gameTime)
 	local scriptState = readScriptState()
 
@@ -38,14 +35,6 @@ local function makeStatus()
 	if scriptState ~= nil then
 		active = scriptState.active == true
 		factor = scriptState.factor
-	end
-	if scriptState == nil and gameSpeed.millisPerDay > 0 then
-		for __, f in ipairs(FACTORS) do
-			if math.floor(REAL_DAY_MILLIS / f) == gameSpeed.millisPerDay then
-				active = true
-				factor = f
-			end
-		end
 	end
 
 	return {
