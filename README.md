@@ -23,11 +23,11 @@ Bug reports and feature requests are welcome through GitHub Issues. Please inclu
 
 Available on mod.io, also directly in game via the Mod Hub:
 
-https://mod.io/g/transportfever3/m/real-time
+https://mod.io/g/transportfever3/m/real-time1
 
 ## Links
 
 - Website: https://www.nalathan.de/
 - YouTube: https://www.youtube.com/@nalathangaming
-- mod.io: https://mod.io/g/transportfever3/m/real-time
+- mod.io: https://mod.io/g/transportfever3/m/real-time1
 - Issues: https://github.com/Nalathan01/TF3_RealTime/issues
