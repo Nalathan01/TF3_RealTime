@@ -7,9 +7,13 @@ In Transport Fever 3 the vehicles move at a normal pace, but the calendar races 
 - Set date and time of day in a small window, or take the time from your PC clock
 - Calendar and lighting run together in real time, the date changes at midnight
 - Time lapse from 10x up to 3600x (one hour per second), only the clock speeds up, vehicles keep their normal speed
-- Normal game speeds (pause, 2x, 4x) still work on top
+- Game speed (pause, 2x, 4x) applies to the clock too, so travel times always match the clock
 - Clock shown in the game bar, one click opens the settings
 - German, English and French
+
+## Good to know
+
+While real time is active the game calendar is paused and the mod advances the date itself at midnight. Because of that, durations in the finance window (for example loan terms) are shown in real time instead of calendar years. Loans themselves work normally.
 
 ## Installation
 
