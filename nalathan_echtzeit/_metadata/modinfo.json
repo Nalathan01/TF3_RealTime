@@ -7,17 +7,15 @@
     ],
     "name": "Real Time",
     "summary": "Calendar and time of day run in real time, with optional time lapse.",
-    "description": "Set a date and a time of day. Calendar and day/night cycle then run in real time: one minute in game is one real minute. Time lapse (10x to 3600x) speeds up only the clock, vehicles keep their normal speed. Open the panel via the clock in the game bar.\n\nGitHub: https://github.com/Nalathan01/TF3_RealTime/issues\nBug reports please only via GitHub or mod.io. Comments on other download sites cannot be read or answered.",
+    "description": "REAL TIME\nCalendar and day/night cycle run in real time: one minute in game is one real minute.\n- Set date and time of day, or take the time from your PC clock\n- Time lapse from 10x to 3600x, only the clock speeds up, vehicles keep their normal speed\n- Open the panel via the clock in the game bar\n\nECHTZEIT\nKalender und Tageslicht laufen in Echtzeit: eine Minute im Spiel ist eine echte Minute.\n- Datum und Uhrzeit einstellen oder die PC-Uhrzeit übernehmen\n- Zeitraffer von 10x bis 3600x, nur die Uhr läuft schneller, Fahrzeuge fahren normal weiter\n- Das Fenster öffnet sich über die Uhr in der Spielleiste\n\nTEMPS RÉEL\nLe calendrier et le cycle jour/nuit avancent en temps réel : une minute en jeu correspond à une minute réelle.\n- Réglez la date et l'heure ou reprenez l'heure du PC\n- Accéléré de 10x à 3600x, seule l'horloge accélère, les véhicules gardent leur vitesse normale\n- Le panneau s'ouvre via l'horloge dans la barre de jeu\n\nBUG REPORTS / FEHLERMELDUNGEN / SIGNALER UN BUG\nGitHub: https://github.com/Nalathan01/TF3_RealTime/issues\nBug reports please only via GitHub or mod.io. Comments on other download sites cannot be read or answered.\nFehlermeldungen bitte nur über GitHub oder mod.io. Kommentare auf anderen Download-Seiten können nicht gelesen oder beantwortet werden.\nMerci de signaler les bugs uniquement via GitHub ou mod.io. Les commentaires sur les autres sites de téléchargement ne peuvent pas être lus ni traités.",
     "localization": {
         "de": {
             "name": "Echtzeit",
-            "summary": "Kalender und Tageszeit laufen in Echtzeit, mit optionalem Zeitraffer.",
-            "description": "Datum und Uhrzeit einstellen, danach laufen Kalender und Tageslicht in Echtzeit: eine Minute im Spiel ist eine echte Minute. Der Zeitraffer (10x bis 3600x) beschleunigt nur die Uhr, Fahrzeuge fahren normal weiter. Das Fenster öffnet sich über die Uhr in der Spielleiste.\n\nGitHub: https://github.com/Nalathan01/TF3_RealTime/issues\nFehlermeldungen bitte nur über GitHub oder mod.io. Kommentare auf anderen Download-Seiten können nicht gelesen oder beantwortet werden."
+            "summary": "Kalender und Tageszeit laufen in Echtzeit, mit optionalem Zeitraffer."
         },
         "fr": {
             "name": "Temps Réel",
-            "summary": "Le calendrier et l'heure du jour avancent en temps réel, avec accéléré optionnel.",
-            "description": "Réglez une date et une heure. Le calendrier et le cycle jour/nuit avancent ensuite en temps réel : une minute en jeu correspond à une minute réelle. L'accéléré (10x à 3600x) n'accélère que l'horloge, les véhicules gardent leur vitesse normale. Le panneau s'ouvre via l'horloge dans la barre de jeu.\n\nGitHub: https://github.com/Nalathan01/TF3_RealTime/issues\nMerci de signaler les bugs uniquement via GitHub ou mod.io. Les commentaires sur les autres sites de téléchargement ne peuvent pas être lus ni traités."
+            "summary": "Le calendrier et l'heure du jour avancent en temps réel, avec accéléré optionnel."
         }
     },
     "tags": [
