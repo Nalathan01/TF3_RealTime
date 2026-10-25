@@ -1,0 +1,10 @@
+{
+  "archives": null,
+  "files": [
+    "echtzeit/echtzeit.css.lua",
+    "echtzeit/echtzeit.gs.lua",
+    "echtzeit/echtzeit.script.lua",
+    "echtzeit/echtzeit_gui.script.lua",
+    "echtzeit/echtzeit_plugin.res.lua"
+  ]
+}

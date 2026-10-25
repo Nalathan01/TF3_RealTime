@@ -1,0 +1,53 @@
+{
+    "en": {
+        "ECHTZEIT_TITLE": "Real Time",
+        "ECHTZEIT_OFF": "Real time off",
+        "ECHTZEIT_OPEN": "Open real time settings",
+        "ECHTZEIT_PC_TIME": "Use PC time",
+        "ECHTZEIT_START": "Apply and start",
+        "ECHTZEIT_STOP": "Stop real time",
+        "ECHTZEIT_LAPSE": "Time lapse",
+        "ECHTZEIT_LAPSE_1": "Real time",
+        "ECHTZEIT_LAPSE_10": "10 minutes per real minute",
+        "ECHTZEIT_LAPSE_60": "1 minute per second",
+        "ECHTZEIT_LAPSE_600": "10 minutes per second",
+        "ECHTZEIT_LAPSE_3600": "1 hour per second",
+        "ECHTZEIT_DATE": "Date",
+        "ECHTZEIT_TIME": "Time",
+        "ECHTZEIT_INVALID": "Please enter date as DD.MM.YYYY and time as HH:MM"
+    },
+    "de": {
+        "ECHTZEIT_TITLE": "Echtzeit",
+        "ECHTZEIT_OFF": "Echtzeit aus",
+        "ECHTZEIT_OPEN": "Echtzeit einstellen",
+        "ECHTZEIT_PC_TIME": "PC-Uhrzeit übernehmen",
+        "ECHTZEIT_START": "Übernehmen und starten",
+        "ECHTZEIT_STOP": "Echtzeit beenden",
+        "ECHTZEIT_LAPSE": "Zeitraffer",
+        "ECHTZEIT_LAPSE_1": "Echtzeit",
+        "ECHTZEIT_LAPSE_10": "10 Minuten pro echter Minute",
+        "ECHTZEIT_LAPSE_60": "1 Minute pro Sekunde",
+        "ECHTZEIT_LAPSE_600": "10 Minuten pro Sekunde",
+        "ECHTZEIT_LAPSE_3600": "1 Stunde pro Sekunde",
+        "ECHTZEIT_DATE": "Datum",
+        "ECHTZEIT_TIME": "Uhrzeit",
+        "ECHTZEIT_INVALID": "Bitte Datum als TT.MM.JJJJ und Uhrzeit als HH:MM eingeben"
+    },
+    "fr": {
+        "ECHTZEIT_TITLE": "Temps Réel",
+        "ECHTZEIT_OFF": "Temps réel désactivé",
+        "ECHTZEIT_OPEN": "Régler le temps réel",
+        "ECHTZEIT_PC_TIME": "Utiliser l'heure du PC",
+        "ECHTZEIT_START": "Appliquer et démarrer",
+        "ECHTZEIT_STOP": "Arrêter le temps réel",
+        "ECHTZEIT_LAPSE": "Accéléré",
+        "ECHTZEIT_LAPSE_1": "Temps réel",
+        "ECHTZEIT_LAPSE_10": "10 minutes par minute réelle",
+        "ECHTZEIT_LAPSE_60": "1 minute par seconde",
+        "ECHTZEIT_LAPSE_600": "10 minutes par seconde",
+        "ECHTZEIT_LAPSE_3600": "1 heure par seconde",
+        "ECHTZEIT_DATE": "Date",
+        "ECHTZEIT_TIME": "Heure",
+        "ECHTZEIT_INVALID": "Saisir la date au format JJ.MM.AAAA et l'heure au format HH:MM"
+    }
+}
